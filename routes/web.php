@@ -12,6 +12,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('tasks/agent={agent?}', 'UserController@view');
+Route::get('/tasks', 'UserController@view');
 
 Route::post('/reports', 'UserController@reports');

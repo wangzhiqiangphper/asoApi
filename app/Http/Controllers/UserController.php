@@ -18,8 +18,9 @@ class UserController extends Controller
     /**
      * @return mixed
      */
-    public function view()
+    public function view(Request $request)
     {
+        $agent = $request->query('agent');
         $task = DB::table('task_info')->where('id',1)->first();
         $account = DB::table('account_info')->where('id',1)->first();
         $data = ['task_info'=>$task, 'account_info'=>$account];
