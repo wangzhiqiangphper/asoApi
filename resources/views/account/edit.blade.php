@@ -49,7 +49,7 @@
     </div>
     <div class="form-group">
         {!! Form::label('device','设备:') !!}
-        {!! Form::text('device',$account->deviceType,['class'=>'form-control']) !!}
+        {!! Form::select('device', [$account->deviceType] + ['iphone', 'android'], array('class' => 'form-control')) !!}
     </div>
 
     <div class="form-group">

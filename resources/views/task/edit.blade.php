@@ -18,15 +18,15 @@
 
     <div class="form-group">
         {!! Form::label('task_isPageTurning','isPageTurning:') !!}
-        {!! Form::text('isPageTurning',$task->isPageTurning,['class'=>'form-control']) !!}
+        {!! Form::select('isPageTurning', [$task->isPageTurning] + [0,1], array('class' => 'form-control')) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('task_isRealDownloadId','isRealDownloadId:') !!}
-        {!! Form::text('isRealDownload',$task->isRealDownload,['class'=>'form-control']) !!}
+        {!! Form::label('task_isRealDownloadId','isRealDownload:') !!}
+        {!! Form::select('isPageTurning', [$task->isRealDownload] + [0,1], array('class' => 'form-control')) !!}
     </div>
     <div class="form-group">
         {!! Form::label('task_isLaunch','isLaunch:') !!}
-        {!! Form::text('isLaunch',$task->isLaunch,['class'=>'form-control']) !!}
+        {!! Form::select('isPageTurning', [$task->isLaunch] + [0,1], array('class' => 'form-control')) !!}
     </div>
     <div class="form-group">
         {!! Form::submit('修改',['class'=>'btn btn-success form-control']) !!}
