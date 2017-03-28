@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +14,20 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/tasks', 'UserController@view');
+Route::get('/tasks', 'TasksController@view');
 
-Route::post('/reports', 'UserController@reports');
+Route::post('/reports', 'TasksController@reports');
+
+Route::get('/task/index', 'TasksController@index');
+
+Route::get('/task/edit/{id}', 'TasksController@edit');
+
+Route::post('/task/update','TasksController@update');
+
+Route::get('/account/index', 'AccountsController@index');
+
+Route::get('/account/edit/{id}', 'AccountsController@edit');
+
+Route::post('/account/update','AccountsController@update');
+
+Route::post('/task/store', 'TasksController@store');
